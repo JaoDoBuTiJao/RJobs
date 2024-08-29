@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(17, 17, 31);
+}
+
+.wrapper {
+  background: rgb(120, 214, 75);
+  padding: 34px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px #353851;
+  max-width: 500px;
+  width: 100%;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header .logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.wrapper h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.wrapper form {
+  margin-top: 30px;
+}
+
+.wrapper form .input-box {
+  height: 52px;
+  margin: 18px 0;
+  position: relative;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 18px;
+}
+
+.input-box input,
+.input-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px 0 40px; /* Adicione espaço para o ícone */
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid,
+.input-box select:focus {
+  border-color: #4070f4;
+}
+
+.input-box.error input,
+.input-box.error select {
+  border-color: red;
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.policy label {
+  margin-left: 10px;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#termos-alert {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -170px; /* Ajuste para o posicionamento do alerta */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f44336; /* Cor de fundo do alerta */
+  color: white; /* Cor do texto do alerta */
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  visibility: hidden; /* Inicialmente oculto */
+  opacity: 0; /* Inicialmente transparente */
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+#termos-alert.show {
+  visibility: visible; /* Torna visível quando necessário */
+  opacity: 1; /* Torna opaco */
+}
+
+#termos-alert i {
+  margin-right: 5px;
+}
+
+.alert-hidden {
+  display: none;
+}
+
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+
+.input-box.button input:hover {
+  background: #0e4bf1;
+}
+
+#senha-error,
+#confirmarsenha-error,
+#telefone-error,
+#email-error,
+#cpf-error,
+#data-nascimento-error,
+#sexo-error {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: red;
+}
+
+.social-login {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #C7BEBE;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn {
+  background-color: #db4437;
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.social-login button i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+#confirmacao-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  max-width: 400px; /* Largura máxima do container */
+  width: 80%; /* Largura ajustável para se adaptar ao conteúdo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+#confirmacao {
+  background-color: #4CAF50; /* Cor de fundo verde */
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+}
+
+#confirmacao span {
+  display: block;
+  font-size: 24px; /* Tamanho maior para o texto de confirmação */
+  margin-bottom: 15px;
+}
+
+#fechar-confirmacao {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px; /* Ícone maior */
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#fechar-confirmacao:hover {
+  color: rgba(255, 255, 255, 0.7); /* Cor do ícone ao passar o mouse */
+}
+
+.error-message {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: red;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  .header .logo {
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  .wrapper h2 {
+    font-size: 20px;
+  }
+
+  .input-box {
+    margin: 14px 0;
+  }
+
+  .input-box i {
+    font-size: 16px;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 15px;
+    padding: 0 12px 0 35px;
+  }
+
+  .policy label {
+    font-size: 12px;
+  }
+
+  #termos-alert {
+    right: -130px; /* Ajuste para o posicionamento do alerta */
+  }
+
+  .social-login button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .social-login button i {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+
+  #confirmacao span {
+    font-size: 20px;
+  }
+
+  #fechar-confirmacao {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 15px;
+  }
+
+  .header .logo {
+    width: 35px;
+    margin-right: 5px;
+  }
+
+  .wrapper h2 {
+    font-size: 18px;
+  }
+
+  .input-box {
+    margin: 12px 0;
+  }
+
+  .input-box i {
+    font-size: 14px;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 14px;
+    padding: 0 10px 0 30px;
+  }
+
+  .policy label {
+    font-size: 11px;
+  }
+
+  #termos-alert {
+    right: -100px; /* Ajuste para o posicionamento do alerta */
+  }
+
+  .social-login button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .social-login button i {
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  #confirmacao span {
+    font-size: 18px;
+  }
+
+  #fechar-confirmacao {
+    font-size: 22px;
+  }
+}

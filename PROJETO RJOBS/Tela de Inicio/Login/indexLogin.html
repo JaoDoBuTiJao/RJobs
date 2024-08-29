@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/stylelg.css">
+    <title>Login</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <div class="logo"><img src="img/Logo.png" /></div>
+            <h1>O melhor site <br>de empregos do RJ</h1>
+            <img src="img/login.svg" class="left-login-image" alt="login">
+        </div>
+        
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                </div>
+                <p id="error-message" class="error">Usuário não cadastrado. Por favor, cadastre-se.</p>
+                <a class="btn-login" id="login-button">Entrar</a>
+                <a class="btn-login" href="formulario cadastro atualizado/index.html">Cadastrar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptlogin.js"></script>
+</body>
+</html>

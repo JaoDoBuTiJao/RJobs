@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <link rel="stylesheet" href="css/stylehp.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Ícones para as redes sociais -->
+    <script src="teladeinicioscript.js"defer></script> <!-- Incluindo o arquivo JavaScript -->
+    <script src="darkmode.js"defer></script><!-- Inlcuindo o arquivo JS Darkmode -->
+    <title>Página Inicial</title>
+</head>
+<body>   
+    <header class="header">   
+        <div class="logo">
+            <img src="img/Logo.png" />
+        </div> <!--Div Logo-->
+         <div class="menu">
+                    <a href="#" class="menuText">Home</a>
+                    <a href="https://linktr.ee/RJOBS" class="menuText" target="_blank">Aprimore-se</a>
+                    <a class="cadastro" href="Login/indexLogin.html" target="_blank">Comece Já!</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle">
+                        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+                    </button>
+            </div> <!--Menu-->
+        </div><!--Center-->
+    </header><!--Header-->
+    
+    <div class="busca-box">
+        <div class="lupa-buscar">
+            <i class="bi bi-search"></i>
+        </div><!--lupa-buscar-->
+    
+        <div class="input-buscar">
+            <input type="text" name="bdp" id="bdp" placeholder="Pesquise pelo cargo, município ou empresa..." onkeydown="handleKeyPress(event)">
+        </div><!--input-buscar-->
+    </div><!--busca-box-->
+    
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerRow">
+                <div class="footerCol">
+                    <h4>Opções</h4>
+                    <ul>
+                        <li> <a href="#">Início</a></li>
+                        <li> <a href="Login/indexLogin.html" target="_blank">Login</a></li>
+                        <li> <a href="Login/formulario cadastro atualizado/index.html" target="_blank">Cadastro</a></a></li>
+                    </ul>
+                </div><!--footerCol-->
+                <div class="footerCol">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li> <a href="#">Quem somos</a></li>
+                        <li> <a href="#">Nossos serviços</a></li>
+                        <li> <a href="#">Políticas de privacidade</a></li>   
+                    </ul>
+                </div><!--footerCol-->
+                <div class="footerCol">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li> <a href="#">FAQ</a></li>
+                        <li> <a href="#">Como funciona</a></li>
+                        <li> <a href="#">Características</a></li>
+                    </ul>
+                </div><!--footerCol-->
+                <div class="sm">
+                    <a href=""> <i class="bi bi-facebook"></i></a>
+                    <a href=""> <i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-twitter"></i></a>
+                </div><!---->            
+            </div><!--footerRow-->        
+        </div><!--footer-->
+    </footer>
+
+    <!-- Div para a janela pop-up de construção -->
+    <div class="construction-popup" id="construction-popup">
+        <div class="construction-content">
+            <span class="close-btn" onclick="closeMessage()">&times;</span>
+            <h1>Em Construção</h1>
+            <p>Estamos trabalhando para tornar esta página ainda melhor. Em breve estará disponível.</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

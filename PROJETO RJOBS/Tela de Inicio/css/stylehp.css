@@ -1,0 +1,512 @@
+/* Estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: headerFont, allFont, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(../fontes/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: allFont;
+    src: url(../fontes/Roboto/Roboto-Thin.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url(img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para modo escuro */
+.darkmode .footer, .darkmode .header {
+    background-color: #1c241d;
+}
+
+.darkmode .menuText {
+    color: #7D7E75;
+}
+
+.darkmode .cadastro {
+    color: black;
+}
+
+.darkmode .dark-mode-toggle {
+    color: #7D7E75;
+}
+
+.darkmode .footerCol ul li a,
+.darkmode .footerCol h4 {
+    color: #7D7E75;
+}
+
+.darkmode .footer .sm a {
+    color: #7D7E75;
+    border: 1px solid #7D7E75;
+}
+
+.header {
+    background-color: #FAF9F6;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    padding: 0 20px; /* Combine padding left and right */
+    margin: auto;
+    box-shadow: 0 0 10px 0 black;
+    width: 100%;
+    contain: paint 30px;
+    font-family: headerFont;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+    padding: 0;
+    contain: paint 30px;
+    margin: auto;
+    width: 100%;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.menu {
+    width: 100%;
+    text-align: right;
+    padding-top: 38px;
+    padding-right: 60px;
+    font-size: 24px;
+}
+
+.menuText {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    padding: 20px;
+}
+
+.cadastro {
+    color: #FAF9F6;
+    background-color: #044B01;
+    text-decoration: none;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.dark-mode-toggle {
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.busca-box {
+    position: absolute;
+    width: 600px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    top: 70%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    max-width: 100%;
+    border: solid rgb(77, 77, 77);
+}
+
+.busca-box .lupa-buscar,.busca-box .btn-fechar {
+    min-width: 70px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-right: solid gray 1px;
+}
+
+.busca-box .input-buscar {
+    position: absolute;
+    left: 80px;
+    width: calc(100% - 160px); /* Ajuste a largura conforme necessário */
+    height: 100%;
+    line-height: 80px;
+    background-color: none;
+}
+
+.busca-box .input-buscar input {
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    width: 410px;
+    background-color: transparent;
+}
+
+.busca-box .lupa-buscar i {
+    font-size: 35px;
+    color: gray;
+}
+
+.footer {
+    background-color: #FAF9F6;
+    padding: 50px 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    max-width: 100%;
+    margin-top: 46%;
+}
+
+.footerContainer {
+    max-width: 100%;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.footerRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerCol {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footerCol h4 {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.footerCol ul {
+    list-style: none;
+}
+
+.footerCol li {
+    margin: 10px 0;
+}
+
+.footerCol ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: 0.3s;
+}
+
+.footerCol .sm {
+    margin-top: 30px;
+}
+
+.footer .sm a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Responsivo para todas as telas */
+@media (max-width: 1200px) {
+    .header {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .busca-box {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 350px;
+        height: 60px;
+        border: 1px solid rgb(77 ,77 ,77);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        padding: 0px; /* Ajusta o padding interno */
+        margin-top: 220px;
+    }
+    .input-buscar{
+        border: 1px solid rgb(77 ,77 ,77);
+        margin-left: 10px;
+        width: 200px;
+    }
+
+    .busca-box .lupa-buscar {
+        border: none;
+        border-right: none; /* Remove a borda direita da lupa */
+        padding-right: 0; /* Remove o padding à direita da lupa */
+    }
+
+    .busca-box .lupa-buscar {
+        width: 10px; /* Ajusta a largura da lupa */
+        height: 100px; /* Ajusta a altura para combinar com a barra de pesquisa */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        padding: 10px; /* Ajusta o espaçamento à direita da lupa */
+    }
+    
+    .busca-box .input-buscar {
+        border: solid 1px rgb(77 ,77 ,77); /* Remove a borda do input */
+        flex: 1; /* Ocupa todo o espaço disponível */
+        height: 100%; /* Ajusta a altura para combinar com a barra de pesquisa */
+        line-height: 50px; /* Ajusta o alinhamento vertical do texto */
+        background-color: transparent; /* Remove a cor de fundo */
+        border: none; /* Remove a borda */
+        outline: none; /* Remove o outline ao focar */
+        font-size: 16px; /* Tamanho do texto do input */
+        padding: 0 10px; /* Espaçamento interno do input */
+        margin-right: 65px; /* Ajusta o espaçamento à direita do input */
+        margin-left: -1000px; /* Ajusta o espaçamento à esquerda do input */
+    }
+
+    .footerCol {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .menu {
+        size-adjust: 50%;
+        font-size: 95%;
+        margin-top: -90px;
+    }
+
+    .header {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column; /* Ajusta a orientação para empilhar verticalmente */
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px; /* Ajusta o espaçamento do topo */
+    }
+
+    .dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        z-index: 1000; /* Garante que o toggle esteja acima dos outros elementos */
+    }
+
+    .busca-box {
+        position: fixed;
+        top: 140px; /* Distância do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        height: 60px;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .busca-box .input-buscar {
+        position: relative;
+        display: flex; /* Para alinhar os itens em linha */
+        align-items: center; /* Alinhar verticalmente ao centro */
+        width: 100%;
+    }
+
+    .busca-box .input-buscar input {
+        flex: 1; /* Ocupa todo o espaço disponível */
+        font-size: 16px; /* Tamanho da fonte */
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 5px; /* Borda arredondada */
+        margin-left: 10px; /* Espaçamento à esquerda do input */
+    }
+
+    .busca-box .lupa-buscar {
+        font-size: 15px; /* Tamanho do ícone da lupa */
+        color: gray;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .cadastro {
+        font-size: 16px;
+        padding: 8px;
+        margin-top: 20px;
+    }
+
+    body {
+        overflow-x: hidden; /* Impede a rolagem horizontal */
+    }
+}
+
+@media (max-width: 600px) {
+    .footerCol {
+        width: 100%;
+    }
+
+    .header {
+        padding: 2px 3px;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .logo {
+        width: 150px;
+        height: 50px;
+        margin-top: 0px; /* Ajusta o espaçamento do topo */
+    }
+
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+        padding-top: 10px; /* Espaçamento superior */
+        margin-top: 8px;
+        text-align: center;
+        size-adjust: 80%;
+    }
+
+    .busca-box {
+        top: 50px; /* Ajusta a posição do topo */
+        height: 60px; /* Ajusta a altura */
+    }
+
+    .busca-box .input-buscar input {
+       border: none;
+    }
+
+    .cadastro {
+        font-size: 15px; /* Ajusta o tamanho da fonte */
+        padding: 6px; /* Ajusta o padding */
+    }
+}
+
+@media (max-width: 400px) {
+    body{
+        background-size: 150%;
+    }
+    .footerCol {
+        width: 100%;
+    }
+
+    .header {
+        padding: 2px 3px;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .logo {
+        width: 150px;
+        height: 50px;
+        margin-top: 0px; /* Ajusta o espaçamento do topo */
+    }
+
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+        padding-top: 10px; /* Espaçamento superior */
+    }
+
+    .busca-box {
+        top: -20px; /* Ajusta a posição do topo */
+        height: 40px; /* Ajusta a altura */
+    }
+
+    .busca-box .input-buscar input {
+        font-size: 13px; /* Tamanho da fonte */
+    }
+
+    .cadastro {
+        font-size: 15px; /* Ajusta o tamanho da fonte */
+        padding: 6px; /* Ajusta o padding */
+    }
+}
+.construction-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background-color: #000; 
+    color: #ff0000; 
+    border: 2px solid #4d90fe;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
